@@ -33,9 +33,3 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
-.toggle-switch {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-}

@@ -12,24 +12,5 @@
 		<h1>Hi, I'm Agney</h1>
 		<p>🚧 This is still work in progress 🚧</p>
 	</header>
-	<div class="toggle-switch">
-  		<label class="switch-label">
-    		<input type="checkbox" class="checkbox" id="themeToggle">
-    		<span class="slider"></span>
-  		</label>
-	</div>
-	<script>
-  		const toggle = document.getElementById('themeToggle');
-  		if (localStorage.getItem('theme') === 'dark') {
-    		document.body.classList.add('dark');
-    		toggle.checked = true;
-  		}
-
-  		toggle.addEventListener('change', () => {
-    	document.body.classList.toggle('dark');
-    	localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-  		});
-</script>
-
 </body>
 </html>
