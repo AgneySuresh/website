@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <link rel="icon" href="Images/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/ryanoasis/nerd‑fonts@master/patched‑fonts/JetBrainsMono/Regular/complete.css" />
+</head>
+
+<body>
+    <div id="theme-switcher">
+        <span id="theme-name">Gruvbox</span>
+        <button onclick="cycleTheme()">Switch</button>
+    </div>
+
+    <nav>
+        <a href="index.html">FRONT PAGE</a> |
+        <a href="projects.html">PAGE 2</a> |
+        <a href="blog.html">PAGE 3</a>
+    </nav>
+    <div
+        style="max-width: 1200px;width: 95%;margin: 2rem auto;padding: 2rem;border: 2px solid var(--fg);background-color: var(--bg);box-shadow: 0 0 10px rgba(0,0,0,0.1);display: flex;flex-direction: column;justify-content: space-between;">
+        <main class="main-content">
+            <div class="page-header">
+                <span class="page-label">Page 2</span>
+                <h2 class="section-header">A Glimpse into the <span class="accent">Project</span> Shed</h2>
+            </div>
+
+            <article>
+                <h2 class="article-headline">Human Detection System using Deep Learning Methods</h2>
+                <img src="Images/detr.jpg" alt="Block Diagram"
+                    style="display: block; max-width: 100%; height: auto; border: 2px solid var(--fg); margin: 1rem auto;">
+                <p class="text-font">
+                    What if a camera could spot someone lost in the dark, hidden in smoke, or walking through
+                    fog—without missing a beat? That is the concept this project explores.
+                <p>
+                    Unlike regular cameras, this system combines three types of vision: color (RGB), infrared, and
+                    thermal. Together, they give a clearer, more complete view—day or night, rain or shine.
+                </p>
+                <p>
+                    The system uses preprocessing to clean up the data and a powerful learning model called Detection
+                    Transformer to understand what it sees. It doesn’t just detect shapes, it reads patterns and
+                    behavior.
+                </p>
+                <p>
+                    From search and rescue to autonomous vehicles, this kind of smart vision could help machines see—and
+                    act—more like humans, even in the most challenging environments. Curious? <a href="https://github.com/AbijithT2003/Multimodal-human-detection-system">click here</a>.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="article-headline">IOT based Iv Bag Monitoring System</h2>
+                <img src="Images/iot.jpg" alt="Block Diagram"
+                    style="display: block; max-width: 100%; height: auto; border: 2px solid var(--fg); margin: 1rem auto;">
+                <p class="text-font">
+                    In ICUs, missing a low IV bottle can risk patient lives. This smart monitoring system uses an ESP32
+                    microcontroller and a weight sensor to track fluid levels in real time.
+                </p>
+                <p>
+                    Data is sent to the Blynk app via Wi-Fi or mobile networks, notifying nurses before the fluid runs
+                    out or flows back—avoiding human error.
+                </p>
+                <p>
+                    Designed for hospitals and private care, the system can run 24/7 and store data securely, making IV
+                    monitoring safer and more reliable. You can learn more about it <a href="https://github.com/AgneySuresh/IoT-IV-Bag-Monitoring-System">here</a>.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="article-headline">The Silent Janitor: Autonomous Vacuum Bot</h2>
+                <p class="text-font">
+                    Using Arduino and ultrasonic sensors, this bot replicates smart vacuum behavior—obstacle avoidance,
+                    area scanning, and auto-cleaning with minimal logic and parts.
+                </p>
+            </article>
+
+            <article>
+                <h2 class="article-headline">Music in Monochrome: ESP32 MP3 Player [Upcoming]</h2>
+                <p class="text-font">
+                    An e-ink + ESP32-based MP3 player in theory sounds like a match made in heaven. Plays SD card files
+                    with tactile buttons and minimal UI. Analog
+                    soul meets digital logic. I havent started this yet but I plan to very soon, I'd like to keep this
+                    here as a reminder.
+                </p>
+            </article>
+            
+        </main>
+    </div>
+    <footer>
+        <p>"Build your own pyramids, write your own hieroglyphs."</p>
+        <p>&copy; 2025 Agney · The Curious Archive</p>
+    </footer>
+    <script src="theme.js"></script>
+</body>
+
+</html>

@@ -1,30 +1,95 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Agney</title>
+	<title>Welcome</title>
 	<link rel="icon" href="Images/icon.png" type="image/png">
 	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ryanoasis/nerd-fonts@master/patched-fonts/JetBrainsMono/Regular/complete.css" />
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/gh/ryanoasis/nerd‑fonts@master/patched‑fonts/JetBrainsMono/Regular/complete.css" />
 </head>
+
 <body>
-	<header>
-		<h1>Hi, I'm Agney</h1>
-		<p>🚧 This is still work in progress 🚧</p>
-		<p><i>oooh Dark mode huh...Fancy</i></p>
-	</header>
-	<div class="toggle-switch">
-  		<label class="switch-label">
-    		<input type="checkbox" class="checkbox">
-    		<span class="slider"></span>
-  		</label>
+	<div id="theme-switcher">
+		<span id="theme-name">Gruvbox</span>
+		<button onclick="cycleTheme()">Switch</button>
 	</div>
-	<script>
-  	const checkbox = document.querySelector('.checkbox');
-  	checkbox.addEventListener('change', function () {
-    document.body.classList.toggle('dark', this.checked);
-  	});
-	</script>
+
+	<nav>
+		<a href="index.html">FRONT PAGE</a> |
+		<a href="projects.html">PAGE 2</a> |
+		<a href="blog.html">PAGE 3</a>
+	</nav>
+	<div
+		style="max-width: 1200px;width: 95%;margin: 2rem auto;padding: 2rem;border: 2px solid var(--fg);background-color: var(--bg);box-shadow: 0 0 10px rgba(0,0,0,0.1);display: flex;flex-direction: column;justify-content: space-between;">
+		<header class="newspaper-header">
+			<div class="newspaper-title">The Curious Archive</div>
+			<div class="edition-info">
+				Malappuram, Kerala · November 2, 2003 · Issue No. 001
+			</div>
+		</header>
+
+		<main class="main-content">
+			<article style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start;">
+				<img src="Images/agney.jpeg" alt="Portrait of Agney"
+					style="border: 2px solid var(--fg); box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); object-fit: cover; width: 100%; max-width: 300px; height: auto; flex: 1 1 300px;">
+
+				<div style="flex: 1 1 300px; min-width: 250px;">
+					<h2 class="article-headline">Meet <span class="accent">Agney</span>,</h2>
+					<p class="text-font">
+						A curious engineer with a love for old machines, cars, and all things that tell stories. This
+						digital broadsheet showcases a mix of projects, thoughts, and tinkering logs—written not in ink,
+						but
+						in HTML. Some say he dreams in binary and wake up with interupts, which also happens to be from
+						his mom. <br>
+
+					</p>
+				</div>
+			</article>
+			<article>
+				<h2 class="article-headline">Engineer <span class="accent">Open to work</span></h2>
+				<p></p>
+				<p>What am I best at?</p>
+				<p class="text-font">
+					● Languages — C, python, Dart.<br>
+					● Embedded Systems — ESP 32, Arduino, Raspberry Pi.<br>
+					● App Dev — Flutter.<br>
+					● Tools — Git, Linux CLI, Linux Sys Admin.
+				</p>
+			</article>
+			<article>
+				<h2>What is this about?</h2>
+				<p></p>
+				<p>
+					I'm not entirely sure. Anyways this website is still very much work in progress, it is a concept I
+					wanted to bring to life so I made it in a couple of hours. There is still a lot of ideas I want to
+					implement.
+				</p>
+			</article>
+		</main>
+		<h2 class="section-header">Classifieds</h2>
+		<article>
+			<h3>Contact the Editor</h3>
+			<p>Email: agneysuresh1@gmail.com</p>
+			<p>Carrier Pigeon: 🕊️ (Unavailable on Sundays)</p>
+
+			<h3>Public Links</h3>
+			<nav>
+				<p>
+					<a href="https://github.com/AgneySuresh"><span class="accent">GitHub</span></a> |
+					<a href="https://www.linkedin.com/in/agney-suresh/"><span class="accent">LinkedIn</span></a>
+				</p>
+			</nav>
+		</article>
+	</div>
+	<footer>
+		<p>"Build your own pyramids, write your own hieroglyphs."</p>
+		<p>&copy; 2025 Agney · The Curious Archive</p>
+	</footer>
+
+	<script src="theme.js"></script>
 </body>
+
 </html>
