@@ -1,3 +1,7 @@
+/*==================================================
+=            ROOT VARIABLES & BASE STYLES          =
+==================================================*/
+
 :root {
   --bg: #fbf1c7;
   --fg: #3c3836;
@@ -10,25 +14,43 @@ body {
   font-family: 'JetBrainsMono Nerd Font', monospace;
   background-color: var(--bg);
   color: var(--fg);
-  transition: background-color 0.3s, color 0.3s;
   text-align: center;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-nav a {
+
+/*==================================================
+=            NAVIGATION & LINKS                    =
+==================================================*/
+
+nav a,
+nav a:visited {
   text-decoration: none;
   color: var(--fg);
   margin: 0 10px;
 }
 
-nav a:visited {
-  color: var(--fg);
+.linkcolor,
+.linkcolor:visited {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
 }
+
+.accent {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+
+/*==================================================
+=            HEADER & THEME SWITCHER               =
+==================================================*/
 
 header {
   padding: 2rem;
 }
 
-/* Theme Switcher Top-Right */
 #theme-switcher {
   position: absolute;
   top: 10px;
@@ -45,60 +67,55 @@ header {
   cursor: pointer;
 }
 
-/* Gruvbox (default) */
-/* GRUVBOX */
+
+/*==================================================
+=            COLOR THEMES                         =
+==================================================*/
+
+/* -- GRUVBOX -- */
 body.gruvbox-dark {
   --bg: #3c3836;
   --fg: #ebdbb2;
   --accent: #d79921;
-  --accent2: #8ec07c;
 }
 
 body.gruvbox-light {
   --bg: #fbf1c7;
   --fg: #3c3836;
   --accent: #d79921;
-  --accent2: #458588;
 }
 
-
-/* CATPPUCCIN */
+/* -- CATPPUCCIN -- */
 body.catppuccin-dark {
   --bg: #1e1e2e;
   --fg: #cdd6f4;
   --accent: #f38ba8;
-  --accent2: #cba6f7;
 }
 
 body.catppuccin-light {
   --bg: #faf4ed;
   --fg: #4c4f69;
   --accent: #d20f39;
-  --accent2: #ea76cb;
 }
 
-
-/* EVERFOREST */
+/* -- EVERFOREST -- */
 body.everforest-dark {
   --bg: #2b3339;
   --fg: #d3c6aa;
   --accent: #a7c080;
-  --accent2: #d79921;
 }
 
 body.everforest-light {
   --bg: #f1efee;
   --fg: #5c5c57;
   --accent: #a7c080;
-  --accent2: #df8e1d;
 }
 
-.accent {
-  color: var(--accent);
-  font-weight: bold;
-}
 
-/*newspaper*/
+/*==================================================
+=            NEWSPAPER LAYOUT                     =
+==================================================*/
+
 /* Newspaper Header */
 .newspaper-header {
   border-bottom: 4px double var(--fg);
@@ -120,39 +137,7 @@ body.everforest-light {
   opacity: 0.7;
 }
 
-/* Main Content: Two Columns */
-.main-content {
-  column-count: 2;
-  column-gap: 40px;
-  padding: 2rem;
-  text-align: justify;
-}
-
-/* Article Styling */
-article {
-  border: 1px solid var(--fg);
-  padding: 1rem;
-  margin-bottom: 2rem;
-  break-inside: avoid;
-  background-color: rgba(0, 0, 0, 0.02);
-}
-
-/* Section Headings */
-.main-content h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-/* Drop Cap for First Paragraph */
-.main-content article p:first-of-type::first-letter {
-  font-size: 3rem;
-  float: left;
-  line-height: 1;
-  padding-right: 8px;
-  font-weight: bold;
-}
-
+/* Page Header (Page Label) */
 .page-header {
   column-span: all;
   width: 100%;
@@ -167,6 +152,42 @@ article {
   opacity: 0.6;
   margin-bottom: 0.2rem;
   letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/*==================================================
+=            CONTENT & ARTICLE STYLES             =
+==================================================*/
+
+.main-content {
+  column-count: 2;
+  column-gap: 40px;
+  padding: 2rem;
+  text-align: justify;
+}
+
+article {
+  border: 1px solid var(--fg);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  break-inside: avoid;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Drop Cap Styling */
+.main-content article p:first-of-type::first-letter {
+  font-size: 3rem;
+  float: left;
+  line-height: 1;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+/* Section & Headings */
+.main-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
